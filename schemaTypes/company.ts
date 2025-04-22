@@ -37,12 +37,12 @@ export default defineType({
     defineField({
       name: 'timeFrom',
       title: 'From',
-      type: 'string',
+      type: 'date',
     }),
     defineField({
       name: 'timeTo',
       title: 'To',
-      type: 'string',
+      type: 'date',
     }),
   ],
 })
