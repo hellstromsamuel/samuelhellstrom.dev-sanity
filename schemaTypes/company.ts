@@ -35,6 +35,12 @@ export default defineType({
       validation: (Rule) => Rule.required().min(10).max(200),
     }),
     defineField({
+      name: 'role',
+      title: 'Role',
+      type: 'string',
+      validation: (Rule) => Rule.required().min(2).max(100),
+    }),
+    defineField({
       name: 'timeFrom',
       title: 'From',
       type: 'date',
