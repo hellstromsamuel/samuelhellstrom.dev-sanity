@@ -34,5 +34,15 @@ export default defineType({
       type: 'text',
       validation: (Rule) => Rule.required().min(10).max(200),
     }),
+    defineField({
+      name: 'timeFrom',
+      title: 'From',
+      type: 'string',
+    }),
+    defineField({
+      name: 'timeTo',
+      title: 'To',
+      type: 'string',
+    }),
   ],
 })
