@@ -1,8 +1,8 @@
 import {defineType, defineField} from 'sanity'
 
 export default defineType({
-  name: 'companyList',
-  title: 'Company List',
+  name: 'globalBlocks',
+  title: 'Global blocks',
   type: 'document',
   fields: [
     defineField({

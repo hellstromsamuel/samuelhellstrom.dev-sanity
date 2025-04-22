@@ -56,11 +56,13 @@ export default defineType({
       role: 'role',
       timeFrom: 'timeFrom',
       timeTo: 'timeTo',
+      logo: 'logo',
     },
-    prepare({role, timeFrom, timeTo}) {
+    prepare({role, timeFrom, timeTo, logo}) {
       return {
         title: `${role}`,
         subtitle: `${timeFrom} - ${timeTo || ''}`,
+        media: logo,
       }
     },
   },
