@@ -51,4 +51,29 @@ export default defineType({
       type: 'date',
     }),
   ],
+  preview: {
+    select: {
+      role: 'role',
+      timeFrom: 'timeFrom',
+      timeTo: 'timeTo',
+    },
+    prepare({role, timeFrom, timeTo}) {
+      return {
+        title: `${role}`,
+        subtitle: `${timeFrom} - ${timeTo || ''}`,
+      }
+    },
+  },
+  orderings: [
+    {
+      title: 'Time From, New',
+      name: 'timeFromDesc',
+      by: [{field: 'timeFrom', direction: 'desc'}],
+    },
+    {
+      title: 'Time From, Old',
+      name: 'timeFromAsc',
+      by: [{field: 'timeFrom', direction: 'asc'}],
+    },
+  ],
 })
